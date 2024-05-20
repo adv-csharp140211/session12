@@ -77,4 +77,16 @@ public partial class Form1 : Form
         repo.Create(new Category { Description = "Test 2", Name = "CAT ----- 5/20/2024 17:48:22.411 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 5/20/2024 17:48:22.411 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection)" });
         repo.SaveChanges();
     }
+
+    private void button2_Click(object sender, EventArgs e)
+    {
+        if(textBox1.Text == "P@ss!")
+        {
+            MessageBox.Show("yes 🎉");
+        }
+        else
+        {
+            MessageBox.Show("no!");
+        }
+    }
 }

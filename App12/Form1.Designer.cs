@@ -33,6 +33,9 @@ partial class Form1
         buttonTransactionEF = new Button();
         buttonTransactionScope = new Button();
         button1 = new Button();
+        button2 = new Button();
+        textBox1 = new TextBox();
+        label1 = new Label();
         SuspendLayout();
         // 
         // buttonText
@@ -85,11 +88,40 @@ partial class Form1
         button1.UseVisualStyleBackColor = true;
         button1.Click += button1_Click;
         // 
+        // button2
+        // 
+        button2.Location = new Point(312, 331);
+        button2.Name = "button2";
+        button2.Size = new Size(75, 23);
+        button2.TabIndex = 5;
+        button2.Text = "check pass";
+        button2.UseVisualStyleBackColor = true;
+        button2.Click += button2_Click;
+        // 
+        // textBox1
+        // 
+        textBox1.Location = new Point(312, 302);
+        textBox1.Name = "textBox1";
+        textBox1.Size = new Size(182, 23);
+        textBox1.TabIndex = 6;
+        // 
+        // label1
+        // 
+        label1.AutoSize = true;
+        label1.Location = new Point(257, 310);
+        label1.Name = "label1";
+        label1.Size = new Size(30, 15);
+        label1.TabIndex = 7;
+        label1.Text = "pass";
+        // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
+        Controls.Add(label1);
+        Controls.Add(textBox1);
+        Controls.Add(button2);
         Controls.Add(button1);
         Controls.Add(buttonTransactionScope);
         Controls.Add(buttonTransactionEF);
@@ -98,6 +130,7 @@ partial class Form1
         Name = "Form1";
         Text = "Form1";
         ResumeLayout(false);
+        PerformLayout();
     }
 
     #endregion
@@ -107,4 +140,7 @@ partial class Form1
     private Button buttonTransactionEF;
     private Button buttonTransactionScope;
     private Button button1;
+    private Button button2;
+    private TextBox textBox1;
+    private Label label1;
 }
