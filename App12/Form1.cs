@@ -1,6 +1,7 @@
 ﻿using app07.Model;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 using System.Transactions;
 
 namespace App12;
@@ -35,13 +36,7 @@ public partial class Form1 : Form
         ctx.SaveChanges();
     }
 
-    private void AddProduct()
-    {
-        using var ctx = new AppDbContext();
-        var product = new Product { Name = "Test Transaction 2", Description = "test", CategoryId = 4 };
-        ctx.Add(product);
-        ctx.SaveChanges();
-    }
+   
 
     private void buttonTransactionEF_Click(object sender, EventArgs e)
     {
@@ -117,4 +112,31 @@ public partial class Form1 : Form
             }
         }
     }
+
+    private void AddProduct()
+    {
+        /*
+         *  validate
+         *  business logic
+        */
+        using var ctx = new AppDbContext();
+        var product = new Product { Name = "Test Transaction 2", Description = "test", CategoryId = 4 };
+        ctx.Add(product);
+        ctx.SaveChanges();
+    }
+
+    private string ToJalali(DateTime date)
+    {
+        //var pc = new PersianCalendar();
+        //return $"{pc.GetDayOfMonth(date)}/{pc.GetMonth(date)}/{pc.GetYear(date)}";
+        return "31/3/1403";
+    }
+
+    private void test_ToJalali_date1()
+    {
+        var j = ToJalali(new DateTime(2024, 5, 20));
+        if (j != "31/3/1403") throw new Exception("khata");
+    }
+
+
 }
