@@ -4,7 +4,12 @@ Deploy
 	secure / obfuscate -> deobfuscate
 	setup
 
-	web:docker 
+	web:docker
+	virtual machine
+		vm box
+		vmware
+		hyper-v
+		wsl2
 
 Embeded DB
 	SQLite
