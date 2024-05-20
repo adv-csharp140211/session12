@@ -1,4 +1,5 @@
 ﻿using app07.Model;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using System.Transactions;
 
@@ -80,13 +81,40 @@ public partial class Form1 : Form
 
     private void button2_Click(object sender, EventArgs e)
     {
-        if(textBox1.Text == "P@ss!")
+        if (textBox1.Text == "P@ss!")
         {
             MessageBox.Show("yes 🎉");
         }
         else
         {
             MessageBox.Show("no!");
+        }
+    }
+
+    private void buttonSQLite_Click(object sender, EventArgs e)
+    {
+        using (var connection = new SqliteConnection("Data Source=hello.db"))
+        {
+            connection.Open();
+
+            var command = connection.CreateCommand();
+            command.CommandText =
+            @"
+        SELECT name
+        FROM user
+        WHERE id = $id
+    ";
+            command.Parameters.AddWithValue("$id", 1);
+
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    var name = reader.GetString(0);
+
+                    Console.WriteLine($"Hello, {name}!");
+                }
+            }
         }
     }
 }

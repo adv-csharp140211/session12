@@ -36,6 +36,7 @@ partial class Form1
         button2 = new Button();
         textBox1 = new TextBox();
         label1 = new Label();
+        buttonSQLite = new Button();
         SuspendLayout();
         // 
         // buttonText
@@ -114,11 +115,22 @@ partial class Form1
         label1.TabIndex = 7;
         label1.Text = "pass";
         // 
+        // buttonSQLite
+        // 
+        buttonSQLite.Location = new Point(680, 69);
+        buttonSQLite.Name = "buttonSQLite";
+        buttonSQLite.Size = new Size(75, 23);
+        buttonSQLite.TabIndex = 8;
+        buttonSQLite.Text = "Sqlite";
+        buttonSQLite.UseVisualStyleBackColor = true;
+        buttonSQLite.Click += buttonSQLite_Click;
+        // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
+        Controls.Add(buttonSQLite);
         Controls.Add(label1);
         Controls.Add(textBox1);
         Controls.Add(button2);
@@ -143,4 +155,5 @@ partial class Form1
     private Button button2;
     private TextBox textBox1;
     private Label label1;
+    private Button buttonSQLite;
 }
