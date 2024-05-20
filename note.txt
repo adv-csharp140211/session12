@@ -1,0 +1,11 @@
+Transaction
+	Unit-of-work -> Generic repository
+Deploy
+	secure
+	setup
+	docker
+
+Embeded DB
+	SQLite
+
+Test
