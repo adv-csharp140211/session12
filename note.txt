@@ -1,4 +1,4 @@
-Transaction
+﻿Transaction
 	Unit-of-work -> Generic repository
 Deploy
 	secure / obfuscate -> deobfuscate
@@ -31,3 +31,10 @@ Test
 		
 	End-to-End test
 		web
+
+
+		اگه ممکنه کاملترین پروژه مربوط به product و category، اونی که gridview داشت و عملیات add و delete و list و ... رو استفاده کرده بودیم رو بصورت معماری چندلایه بنویسید و ارتباط لایه ui با biz بصورت Service oriented باشه.
+و روی git بذاریدش.
+فکر می‌کنم کاملترین پروژه مون اونی بود که لاگین و دسترسی هم داشت.
+
+قسمت سرویس رو نمیدونم از کدوم استفاده کنید. یا rest یا soap یا grpc. هرکدومش که برای پروژه ما منطقی‌تره
